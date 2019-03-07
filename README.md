@@ -62,31 +62,27 @@
 - python3 -> range이 xrange로 변경
 
 - Co-Routine(코루틴)
- - 진입점이 여럿이며, 병렬(Concurrensy, not Parallelism)
- - 호출부와 함수는 대등한 관계
- - 여러번 호출이 되어도, Routine 내 Context가 유지
+  - 진입점이 여럿이며, 병렬(Concurrensy, not Parallelism)
+  - 호출부와 함수는 대등한 관계
+  - 여러번 호출이 되어도, Routine 내 Context가 유지
  
 - Generator
- - getnerator은 항상 iterator
- - 연속된(Swquence)값들을 생산해내는 함수
- - 함수에 yield한 값들이 순차적으로 생산
- - Generator에서 return 문을 만나더라도 종료만 될 뿐, 리턴값이 사용되지 않는다. Generator은 오직 yield를 통해서만 값을 리턴
- - 추가 yield가 없으면, Stoplteration 예외 자동 발생 (for 루프는 StopIteration 예외를 자동으로 처리)
- - 중첩된 Fenerator은 Pipline 작동
+  - getnerator은 항상 iterator
+  - 연속된(Swquence)값들을 생산해내는 함수
+  - 함수에 yield한 값들이 순차적으로 생산
+  - Generator에서 return 문을 만나더라도 종료만 될 뿐, 리턴값이 사용되지 않는다. Generator은 오직 yield를 통해서만 값을 리턴
+  - 추가 yield가 없으면, Stoplteration 예외 자동 발생 (for 루프는 StopIteration 예외를 자동으로 처리)
+  - 중첩된 Fenerator은 Pipline 작동
 
 ### 11. 빌트인 함수, 정렬 (3/6)
 - sorted: 정렬된 리스트를 반환
-- sorted_list = sorted(iterable, key=None, reverse=False)
-
+  - sorted_list = sorted(iterable, key=None, reverse=False)
 - list의 sort 멤버함수: list는 자체적으로 sort함수를 지원
- - list자체의 순서를 변경
- - sorted와 다르게 리턴값이 없다. 즉, None을 리턴한다.
-
+  - list자체의 순서를 변경
+  - sorted와 다르게 리턴값이 없다. 즉, None을 리턴한다.
 - filter: 지정 함수로 필터링된 결과를 생산할 Iterator를 반환, 각 원소마다 지정함수가 호출되어, 리턴값이 True 판정될 경우 통과
-- iterator = filter(필터링 여부를 결정할 함수, iterable)
-
+  - iterator = filter(필터링 여부를 결정할 함수, iterable)
 - map: 지정 함수의 리턴값을 반환할 Iterator 반환
-- iterator = map(값을 변환할 함수, iterable)
-
+  - iterator = map(값을 변환할 함수, iterable)
 - max/min: iterable에서 key함수를 거친 결과값 중에 가장 큰 결과값의 반환
-- Tip: max와 min을 사용할 떄는 default값을 정해주는 것이 좋다.
+  - Tip: max와 min을 사용할 떄는 default값을 정해주는 것이 좋다.
